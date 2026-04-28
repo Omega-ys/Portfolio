@@ -1,0 +1,136 @@
+body {
+    background-color: rgb(29, 39, 42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNrdGV1eW13ajduMDZoOG84bHlrcmJ1ZW5nZm12OHdqZ2k3emwyeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6UBedJJfaxXHvZyU/giphy.gif);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+}
+
+.Container0 {
+    height: 75px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-color: rgb(45, 46, 47);
+    border-bottom-style: solid;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.Container0 a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.Container0 a:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+.po, .pr, .ab, .sk, .ed, .we {
+    align-content: center;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.Profile, .Skill, .Project, .Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 86vh;
+    animation: fadeInUp 1s ease-out;
+}
+
+.Profile h2 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.Profile p {
+    font-size: 20px;
+}
+
+.Face1 {
+    margin-top: 20px;
+    width: 250px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #000000;
+    animation: glow 3s infinite ease-in-out;
+}
+
+.Skill {
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.Project {
+    font-size: 30px;
+}
+
+.Contact {
+    flex-direction: column;
+    font-size: 15px;
+}
+
+section {
+    scroll-margin-top: 80px;
+    width: 100%;
+}
+#pos, #min, #grd {
+    margin-right:10px;
+    border-radius: 20px;
+    max-width: 100%;
+    height: 35vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 1s ease-out;
+}
+
+#pos:hover, #min:hover, #grd:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.1);
+}
+
+#pos { transform: rotate(-1deg); }
+#min { transform: rotate(1deg); }
+
+
+#pos:hover, #grd:hover {
+    transform: translateY(-10px) scale(1.02) rotate(0deg);
+}
